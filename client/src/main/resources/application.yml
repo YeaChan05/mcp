@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: client
+  config:
+    import: optional:file:resources/.env
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+  ai:
+    mcp:
+      client:
+        enabled: true
+        name: client
+        toolcallback:
+          enabled: true
+        sse:
+          connections:
+            server:
+              url: http://localhost:8081
+        stdio:
+          connections:
+            github:
+              command: ${NPX_PATH:npx}
+              args:
+                - "-y"
+                - "@modelcontextprotocol/server-github"
+              env:
+                GITHUB_PERSONAL_ACCESS_TOKEN: ${GITHUB_PERSONAL_ACCESS_TOKEN}
+
+        request-timeout: 3000000
+
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.7
+          max-tokens: 2000
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
