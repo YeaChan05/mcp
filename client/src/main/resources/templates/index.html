@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub 프로젝트 검색기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">GitHub 프로젝트 검색기</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/search">검색</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">AI 기반 GitHub 프로젝트 추천</h1>
+            <p class="lead my-4">원하는 기술 키워드를 입력하면, AI가 학습에 적합한 GitHub 프로젝트를 분석하고 추천해드립니다.</p>
+            <a href="/search" class="btn btn-light btn-lg">지금 검색하기</a>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">주요 기능</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <div class="feature-icon">📊</div>
+                            <h3 class="card-title">인기 저장소 분석</h3>
+                            <p class="card-text">Star 수와 사용자 반응을 기반으로 인기 저장소를 선별합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <div class="feature-icon">📝</div>
+                            <h3 class="card-title">문서화 수준 평가</h3>
+                            <p class="card-text">README 파일과 코드 주석을 분석하여 학습하기 좋은 프로젝트를 찾습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4">
+                        <div class="card-body">
+                            <div class="feature-icon">🧠</div>
+                            <h3 class="card-title">AI 기반 추천</h3>
+                            <p class="card-text">OpenAI의 최신 모델을 활용해 사용자에게 적합한 학습 리소스를 추천합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">이용 방법</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://placehold.co/600x400?text=How+To+Use" alt="How to use" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <div class="ps-md-5">
+                        <h3>간단한 3단계로 시작하세요</h3>
+                        <ol class="mt-4">
+                            <li class="mb-3">키워드 입력: 관심 있는 기술 키워드를 검색창에 입력합니다.</li>
+                            <li class="mb-3">AI 분석: 입력된 키워드를 기반으로 AI가 GitHub 저장소를 검색하고 분석합니다.</li>
+                            <li class="mb-3">추천 결과: 학습에 가장 적합한 프로젝트들을 추천받고 바로 시작하세요!</li>
+                        </ol>
+                        <a href="/search" class="btn btn-primary mt-3">시작하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 GitHub 프로젝트 검색기. MCP(Model Context Protocol) 학습 프로젝트.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>

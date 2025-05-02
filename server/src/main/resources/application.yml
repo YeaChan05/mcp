@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: server
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: server
+        version: 1.0.0
+        resource-change-notification: true
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    org.springframework.mcp: DEBUG
+    com.hct.server: DEBUG
+    root: INFO

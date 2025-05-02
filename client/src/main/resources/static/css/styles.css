@@ -1,0 +1,145 @@
+/* 공통 스타일 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 그라데이션 배경 */
+.gradient-bg {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+}
+
+/* 카드 호버 효과 */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 버튼 스타일 */
+.gradient-btn {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    color: white;
+}
+
+.gradient-btn:hover {
+    background: linear-gradient(135deg, #5d7fe3, #9666d3);
+    color: white;
+}
+
+/* 로딩 애니메이션 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+.search-container {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 3rem 0;
+    color: white;
+}
+
+.search-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.popular-keyword {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.popular-keyword:hover {
+    transform: translateY(-2px);
+    color: #6e8efb;
+}
+
+.loading {
+    display: none;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 5rem 0;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #6e8efb;
+}
+
+.result-header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 2rem 0;
+    color: white;
+}
+
+.project-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.stars {
+    color: #ffc107;
+}
+
+.badge {
+    margin-right: 0.5rem;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+}
+
+.new-search-btn {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+}

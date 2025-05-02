@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <logger name="org.springframework.ai" level="DEBUG"/>
+    <logger name="org.springframework.mcp" level="DEBUG"/>
+    <logger name="com.hct.server" level="DEBUG"/>
+    
+    <!-- Special logger for MCP initialization -->
+    <logger name="org.springframework.ai.mcp" level="TRACE"/>
+    <logger name="org.springframework.ai.mcp.server" level="TRACE"/>
+    <logger name="org.springframework.ai.tool" level="TRACE"/>
+    <logger name="org.springframework.ai.tool.resolution" level="TRACE"/>
+    <logger name="org.springframework.ai.tool.function" level="TRACE"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
