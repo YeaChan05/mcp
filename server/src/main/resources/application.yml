@@ -16,5 +16,5 @@ logging:
   level:
     org.springframework.ai: DEBUG
     org.springframework.mcp: DEBUG
-    com.hct.server: DEBUG
+    com.yechan.server: DEBUG
     root: INFO

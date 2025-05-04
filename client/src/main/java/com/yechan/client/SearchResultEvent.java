@@ -1,4 +1,4 @@
-package com.hct.client;
+package com.yechan.client;
 
 import lombok.Builder;
 import lombok.Getter;

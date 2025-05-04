@@ -1,4 +1,4 @@
-package com.hct.client;
+package com.yechan.client;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;

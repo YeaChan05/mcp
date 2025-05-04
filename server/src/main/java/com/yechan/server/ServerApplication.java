@@ -1,13 +1,13 @@
-package com.hct.client;
+package com.yechan.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ClientApplication {
+public class ServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ClientApplication.class, args);
+        SpringApplication.run(ServerApplication.class, args);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.hct.client;
+package com.yechan.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

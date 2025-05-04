@@ -176,39 +176,54 @@
             
             // 이벤트 리스너 등록
             eventSource.addEventListener('status', function(e) {
-                const data = JSON.parse(e.data);
-                statusMessage.textContent = data.data;
-                progressBar.style.width = data.progress + '%';
+                try {
+                    const data = JSON.parse(e.data);
+                    statusMessage.textContent = data.data;
+                    progressBar.style.width = data.progress + '%';
+                } catch (err) {
+                    console.error('Status 파싱 에러:', err);
+                }
             });
             
             eventSource.addEventListener('result', function(e) {
-                const data = JSON.parse(e.data);
-                // 결과 처리
-                resultContent.innerHTML = data.data;
-                progressBar.style.width = '100%';
-                
-                // 결과 표시 전환
-                setTimeout(function() {
-                    loadingSection.style.display = 'none';
-                    resultContainer.style.display = 'block';
+                try {
+                    const data = JSON.parse(e.data);
+                    // 결과 처리
+                    resultContent.innerHTML = data.data;
+                    progressBar.style.width = '100%';
                     
-                    // 버튼 상태 복원
-                    searchButton.disabled = false;
-                    searchButton.innerHTML = '검색하기';
-                    
-                    // SSE 연결 종료
-                    if (eventSource) {
-                        eventSource.close();
-                        eventSource = null;
-                    }
-                    
-                    // URL 형식 정리
-                    fixUrlFormats();
-                }, 500);
+                    // 결과 표시 전환
+                    setTimeout(function() {
+                        loadingSection.style.display = 'none';
+                        resultContainer.style.display = 'block';
+                        
+                        // 버튼 상태 복원
+                        searchButton.disabled = false;
+                        searchButton.innerHTML = '검색하기';
+                        
+                        // SSE 연결 종료
+                        if (eventSource) {
+                            eventSource.close();
+                            eventSource = null;
+                        }
+                        
+                        // URL 형식 정리
+                        fixUrlFormats();
+                    }, 500);
+                } catch (err) {
+                    console.error('Result 파싱 에러:', err);
+                    statusMessage.textContent = '결과 처리 중 오류가 발생했습니다.';
+                    statusMessage.classList.add('text-danger');
+                }
             });
             
             eventSource.addEventListener('error', function(e) {
-                const data = JSON.parse(e.data || '{"data": "서버 연결 오류가 발생했습니다."}');
+                let data;
+                try {
+                    data = e.data ? JSON.parse(e.data) : {data: "서버 연결 오류가 발생했습니다."};
+                } catch (err) {
+                    data = {data: "서버 연결 오류가 발생했습니다."};
+                }
                 statusMessage.textContent = data.data;
                 statusMessage.classList.add('text-danger');
                 

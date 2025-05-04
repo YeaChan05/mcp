@@ -15,7 +15,7 @@ subprojects {
         }
     }
 
-    group = 'com.hct'
+    group = 'com.yechan'
     version = '0.0.1-SNAPSHOT'
 
 

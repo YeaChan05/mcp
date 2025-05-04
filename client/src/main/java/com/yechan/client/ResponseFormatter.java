@@ -1,4 +1,4 @@
-package com.hct.client;
+package com.yechan.client;
 
 import org.springframework.stereotype.Component;
 import java.util.regex.Matcher;

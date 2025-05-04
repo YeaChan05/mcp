@@ -5,7 +5,7 @@
 
     <logger name="org.springframework.ai" level="DEBUG"/>
     <logger name="org.springframework.mcp" level="DEBUG"/>
-    <logger name="com.hct.server" level="DEBUG"/>
+    <logger name="com.yechan.server" level="DEBUG"/>
     
     <!-- Special logger for MCP initialization -->
     <logger name="org.springframework.ai.mcp" level="TRACE"/>
