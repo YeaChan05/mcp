@@ -45,3 +45,6 @@ server:
     encoding:
       charset: UTF-8
       force: true
+logging:
+  level:
+    io.modelcontextprotocol.spec: trace
